@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Pack Your Bags: Travel &amp; Real-Life English</title>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{color-scheme:light;--bg:#FBFAF7;--card:#fff;--ink:#1d2b36;--mute:#5d6b76;--blue:#1f5f8b;--blue-s:#e6f0f7;--green:#3f7d62;--green-s:#e7f2ec;--terra:#b8553a;--terra-s:#f8ebe5;--line:#e3e0d8;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-padding-top:70px;scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 "Instrument Sans",system-ui,sans-serif}
+h1,h2,h3{font-family:"Bricolage Grotesque",Georgia,sans-serif;line-height:1.15;margin:0 0 .5em;letter-spacing:-.01em}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:rgba(251,250,247,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);display:flex;gap:6px;padding:10px 16px;overflow-x:auto}
+nav a{white-space:nowrap;text-decoration:none;color:var(--mute);font-weight:500;font-size:15px;padding:6px 12px;border-radius:99px}
+nav a:hover{background:var(--blue-s);color:var(--blue)}
+nav button{margin-left:auto;white-space:nowrap}
+button{font:inherit;cursor:pointer}
+.btn{border:1.5px solid var(--blue);background:#fff;color:var(--blue);border-radius:99px;padding:6px 14px;font-weight:600;font-size:14px}
+.btn[aria-pressed=true]{background:var(--blue);color:#fff}
+:focus-visible{outline:3px solid var(--terra);outline-offset:2px}
+.hero{max-width:1000px;margin:0 auto;padding:64px 22px 36px;display:grid;grid-template-columns:1.4fr 1fr;gap:30px;align-items:center}
+.hero h1{font-size:clamp(38px,6vw,68px);font-weight:800;color:var(--blue)}
+.hero p{font-size:19px;color:var(--mute);max-width:46ch}
+.ticket{background:var(--card);border:2px dashed var(--terra);border-radius:18px;padding:22px;transform:rotate(2deg)}
+.ticket b{font-family:"Bricolage Grotesque";font-size:22px;color:var(--terra)}
+.ticket ul{margin:10px 0 0;padding-left:18px;color:var(--mute);font-size:15px}
+section.part{max-width:1000px;margin:0 auto;padding:46px 22px;border-top:1px solid var(--line)}
+.tag{display:inline-block;background:var(--green-s);color:var(--green);font-weight:600;font-size:14px;border-radius:99px;padding:3px 12px;margin-bottom:12px}
+h2{font-size:clamp(28px,4vw,42px);color:var(--ink)}
+.lead{color:var(--mute);max-width:62ch}
+.grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));margin:20px 0}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px}
+.q{font-family:"Bricolage Grotesque";font-size:21px;font-weight:700;color:var(--blue);background:var(--blue-s);border-radius:14px;padding:16px 20px}
+.dests{display:grid;gap:12px;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));margin:20px 0}
+.dest{background:var(--card);border:2px solid var(--line);border-radius:14px;padding:16px;text-align:left}
+.dest:hover{border-color:var(--blue)}
+.dest[aria-pressed=true]{border-color:var(--terra);background:var(--terra-s)}
+.dest span{font-size:34px;display:block}
+.dest b{font-family:"Bricolage Grotesque";font-size:18px}
+.dest small{color:var(--mute);display:block}
+.own{display:flex;gap:8px;margin:6px 0 4px;flex-wrap:wrap}
+.own input{flex:1;min-width:180px;font:inherit;padding:10px 14px;border:2px solid var(--line);border-radius:12px;background:#fff}
+.chosen{font-family:"Bricolage Grotesque";font-size:22px;color:var(--terra);font-weight:700;min-height:1.4em}
+.steps{counter-reset:s;display:grid;gap:12px;margin:18px 0}
+.steps .card{position:relative;padding-left:58px}
+.steps .card::before{counter-increment:s;content:counter(s);position:absolute;left:16px;top:16px;width:28px;height:28px;border-radius:50%;background:var(--green);color:#fff;font-weight:700;display:grid;place-items:center}
+.fu{color:var(--mute);font-size:15px;margin:6px 0 0}
+.fu em{color:var(--green);font-style:normal;font-weight:600}
+.say{font-style:italic;color:var(--ink)}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin:22px 0 14px}
+.tabs button{border:1.5px solid var(--line);background:#fff;border-radius:99px;padding:8px 16px;font-weight:600;color:var(--mute)}
+.tabs button[aria-selected=true]{background:var(--blue);border-color:var(--blue);color:#fff}
+.tblwrap{overflow-x:auto}
+table{border-collapse:collapse;width:100%;min-width:640px;background:#fff;border-radius:12px;overflow:hidden}
+th,td{text-align:left;padding:12px 14px;border-bottom:1px solid var(--line);vertical-align:top;font-size:15.5px}
+th{background:var(--blue-s);color:var(--blue);font-weight:600}
+td:first-child{font-weight:600;color:var(--ink);min-width:200px}
+td .alt{color:var(--terra)}
+.note{margin-top:14px;font-size:15px;color:var(--mute);background:var(--terra-s);border-radius:10px;padding:10px 14px}
+.role{background:var(--green-s);border-radius:16px;padding:22px;margin:22px 0}
+.role h3{color:var(--green)}
+.role .who{font-weight:600}
+.scene{background:var(--card);border:1px solid var(--line);border-left:6px solid var(--blue);border-radius:14px;padding:18px 20px;margin:16px 0}
+.scene.twist{border-left-color:var(--terra)}
+.scene h3{font-size:22px;margin-bottom:.3em}
+.goal{font-weight:600;color:var(--green)}
+.teacher{display:none;margin-top:12px;background:#fff8e6;border:1px dashed #d7b24a;border-radius:10px;padding:10px 14px;font-size:14.5px}
+body.tnotes .teacher{display:block}
+.skills{display:grid;gap:12px;grid-template-columns:repeat(auto-fill,minmax(220px,1fr))}
+.skills .card b{color:var(--blue)}
+footer{text-align:center;color:var(--mute);padding:40px 20px 60px;border-top:1px solid var(--line)}
+@media(max-width:720px){.hero{grid-template-columns:1fr;padding-top:36px}.ticket{transform:none}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<nav aria-label="Lesson parts">
+<a href="#p1">Dream</a><a href="#p2">Build</a><a href="#p3">Real-life English</a><a href="#p4">You’re there</a><a href="#p5">Reflect</a>
+<button class="btn" id="tn" aria-pressed="false">Teacher notes</button>
+</nav>
+
+<header class="hero">
+<div>
+<h1>Pack your bags.<br>You’re going somewhere.</h1>
+<p>Today you won’t study a trip. You’ll plan one, land in it, chat with strangers, and deal with whatever goes wrong. English only, no scripts.</p>
+</div>
+<aside class="ticket" aria-label="Today’s boarding pass">
+<b>Boarding pass</b>
+<ul><li>Choose where you’re going</li><li>Learn what people actually say</li><li>Live four scenes on the ground</li><li>Tell a friend how it went</li></ul>
+</aside>
+</header>
+
+<section class="part" id="p1">
+<span class="tag">Part 1 · Travel dreaming · 5 min</span>
+<h2>Where would you go?</h2>
+<p class="lead">Pick any place on the list, or type your own. It’s your trip.</p>
+<div class="dests" id="dests"></div>
+<div class="own"><input id="own" placeholder="Somewhere else? Type it here" aria-label="Your own destination"><button class="btn" id="ownbtn">Choose</button></div>
+<p class="chosen" id="chosen" aria-live="polite"></p>
+<div class="grid">
+<div class="q">If you could travel anywhere right now, where would you go?</div>
+<div class="q">What draws you to this place?</div>
+<div class="q">What would your ideal trip look like?</div>
+<div class="q">Would you explore like a local or hit the main sights?</div>
+<div class="q">Who would you travel with, if anyone?</div>
+<div class="q">What unexpected experience would make the trip unforgettable?</div>
+</div>
+<div class="teacher"><b>Teacher:</b> Don’t pick for her. Open with: “Okay, forget your schedule for a second. If a ticket landed in your lap tonight, where are you headed?” Then follow her answer: “Ooh, what’s the first thing you picture when you think of it?” Note her destination, travel style and companion; you’ll reuse them in Parts 2 and 4.</div>
+</section>
+
+<section class="part" id="p2">
+<span class="tag">Part 2 · Build your travel experience · 8 min</span>
+<h2>You’ve just landed in <span id="d2">your destination</span>.</h2>
+<p class="lead">Make decisions out loud and explain them. There are no right answers.</p>
+<div class="steps">
+<div class="card"><b>Where are you staying?</b><p class="fu"><em>Follow up:</em> What made you choose that over a central hotel? Would you rather have a view or a good location?</p></div>
+<div class="card"><b>How do you get around?</b><p class="fu"><em>Follow up:</em> Would you ever rent a bike or just walk until your feet give up? What if it rains?</p></div>
+<div class="card"><b>You’ve dropped your bags and the afternoon is empty. What are you in the mood for?</b><p class="fu"><em>Follow up:</em> Would you plan something in advance, or wander and see where the day takes you?</p></div>
+<div class="card"><b>How would you find a hidden gem?</b><p class="fu"><em>Follow up:</em> Who would you ask? What would you look for on a menu or a street?</p></div>
+<div class="card"><b>Someone offers you a local dish you’ve never heard of.</b><p class="fu"><em>Follow up:</em> Do you say yes straight away? What would you ask first?</p></div>
+<div class="card"><b>Your plans change at the last minute. A museum is closed, a train is cancelled.</b><p class="fu"><em>Follow up:</em> Are you the type to panic or improvise? What did you do last time?</p></div>
+</div>
+<div class="teacher"><b>Teacher:</b> This is a conversation, not a quiz. Skip questions she’s already answered. React first (“No way, I’d have done the same!”), then ask. Jot down 2–3 language slips to revisit in the feedback, and don’t interrupt.</div>
+</section>
+
+<section class="part" id="p3">
+<span class="tag">Part 3 · 15 min</span>
+<h2>Real-life English: what people actually say</h2>
+<p class="lead">Chunks, softeners and phrases that make you sound natural. Pick the ones you’d really use. Orange text is a more casual option.</p>
+<div class="tabs" role="tablist" id="tabs"></div>
+<div class="tblwrap"><table><thead><tr><th>Expression</th><th>When to use it</th><th>In real life</th></tr></thead><tbody id="tb"></tbody></table></div>
+<div class="note" id="regnote"></div>
+
+<div class="role">
+<h3>Roleplay 1: At the pharmacy</h3>
+<p><span class="who">Your goal:</span> You’ve got a headache and a sore throat on day two of your trip. Find something that helps and check it’s safe.</p>
+<p class="say">Teacher (pharmacist): “Hi there, what can I help you with today?”</p>
+<p class="fu"><em>Follow-ups:</em> “Have you tried anything for it yet?” · “Any allergies I should know about?” · “Do you get drowsy on that one? I’m driving later.” (Now it’s her turn to ask questions.)</p>
+</div>
+<div class="role">
+<h3>Roleplay 2: In the queue, then at the café</h3>
+<p><span class="who">Your goal:</span> The line is huge. Start a chat with the person next to you, then order something with a small change and fix the mistake when it arrives.</p>
+<p class="say">Teacher (stranger in line): “Ugh, this is taking forever. Do you know if this is the line for the pastries too?”</p>
+<p class="fu"><em>Follow-ups:</em> “Is this your first time here?” · “Oh, you’re from Brazil? What brings you here?” · Barista: “Sorry, was that oat milk or regular?” (It was the wrong one.)</p>
+</div>
+<div class="teacher"><b>Teacher:</b> Show a few expressions, then play. Never give a model answer. If she freezes, offer a first word, not a full sentence. Let her pick which tab to practise; don’t drill all six.</div>
+</section>
+
+<section class="part" id="p4">
+<span class="tag">Part 4 · Immersive roleplay · 12 min</span>
+<h2>You’re in <span id="d4">your destination</span> now!</h2>
+<p class="lead">Four scenes, one day. Scenes unfold as you go, so you won’t know what’s coming. Keep conversations alive: ask, react, clarify, change the subject.</p>
+<div id="scenes"></div>
+<h3 style="margin-top:34px">Tools for real conversations</h3>
+<div class="skills">
+<div class="card"><b>Show interest</b><br>“No way! How did that happen?”</div>
+<div class="card"><b>Ask a follow-up</b><br>“And what did you do after that?”</div>
+<div class="card"><b>Clarify</b><br>“Sorry, did you say left at the church?”</div>
+<div class="card"><b>Keep it going</b><br>“That reminds me, have you been to…?”</div>
+<div class="card"><b>Change the subject</b><br>“Anyway, what’s good to eat around here?”</div>
+</div>
+</section>
+
+<section class="part" id="p5">
+<span class="tag">Part 5 · Reflection &amp; speaking challenge · 5 min</span>
+<h2>Tell a friend how your day went.</h2>
+<p class="lead">Talk freely, without notes. Make it sound like you’re on a call with your best friend that night.</p>
+<div class="grid">
+<div class="card"><b>Where you went</b></div>
+<div class="card"><b>What you did</b></div>
+<div class="card"><b>Someone you met</b></div>
+<div class="card"><b>The unexpected moment</b></div>
+<div class="card"><b>What you’d do differently next time</b></div>
+</div>
+<div class="q">What was the most memorable part of your day, and what made it so special?</div>
+<div class="teacher"><b>Feedback (about 1 minute, communication first):</b> Fluency and spontaneity · vocabulary range · natural expressions she used · how well she kept conversations going. Share two strengths and one or two things to try next time, plus 2–3 phrases from your notes, rephrased more naturally. Don’t correct as she speaks.</div>
+<div class="grid" style="margin-top:20px">
+<div class="card"><b>Fluency</b><br><span class="fu">Did she keep going when she got stuck?</span></div>
+<div class="card"><b>Range</b><br><span class="fu">Did she use new chunks, not just safe words?</span></div>
+<div class="card"><b>Naturalness</b><br><span class="fu">Softeners, reactions, fillers?</span></div>
+<div class="card"><b>Interaction</b><br><span class="fu">Did she ask, react and clarify?</span></div>
+</div>
+</section>
+<footer>Safe travels. Keep talking.</footer>
+
+<script>
+var D=[
+{n:"Edinburgh, Scotland",e:"🏰",s:"Arthur’s Seat",f:"haggis, neeps and tatties",ev:"a ceilidh night in a pub"},
+{n:"Tokyo, Japan",e:"🗼",s:"a tiny jazz bar in Shimokitazawa",f:"a konbini egg sandwich",ev:"a neighbourhood matsuri"},
+{n:"New York City, USA",e:"🗽",s:"the High Line",f:"a bacon, egg and cheese on a roll",ev:"a free open-mic night"},
+{n:"Rome, Italy",e:"🏛️",s:"Trastevere’s back streets",f:"cacio e pepe",ev:"a street concert in a piazza"},
+{n:"Reykjavík, Iceland",e:"🌌",s:"a geothermal pool",f:"fermented shark, if you’re brave",ev:"a northern lights tour"},
+{n:"Dublin, Ireland",e:"☘️",s:"the Guinness Storehouse rooftop",f:"a proper full Irish breakfast",ev:"a trad music session"}
+];
+var cur={n:"your destination",s:"a spot you’ve heard about",f:"a local dish you’ve never tried",ev:"a local event"};
+var el=function(i){return document.getElementById(i)};
+function setDest(d){cur=d;el("chosen").textContent="✈ "+d.n+": great choice.";el("d2").textContent=d.n;el("d4").textContent=d.n;renderScenes();
+[].forEach.call(document.querySelectorAll(".dest"),function(b){b.setAttribute("aria-pressed",b.dataset.n===d.n)})}
+D.forEach(function(d){var b=document.createElement("button");b.className="dest";b.dataset.n=d.n;b.setAttribute("aria-pressed","false");
+var p=d.n.split(", ");b.innerHTML="<span>"+d.e+"</span><b>"+p[0]+"</b><small>"+p[1]+"</small>";b.onclick=function(){setDest(d)};el("dests").appendChild(b)});
+el("ownbtn").onclick=function(){var v=el("own").value.trim();if(v)setDest({n:v,s:"a spot locals love",f:"a local specialty",ev:"a local event"})};
+el("own").onkeydown=function(e){if(e.key==="Enter")el("ownbtn").click()};
+el("tn").onclick=function(){var on=document.body.classList.toggle("tnotes");this.setAttribute("aria-pressed",on)};
+
+var S=[
+{t:"Queue / waiting",r:"Mostly neutral. “Mate” and “love” are friendly in the UK and Ireland but can sound odd elsewhere.",x:[
+["Is this the queue for…?","Checking you’re in the right line.","“Sorry, is this the queue for the tickets?”","“Is this the line for…?” (US)"],
+["Have they said how long it’s going to be?","Making casual conversation about a long wait.","“Have they said how long it’s going to be? I’ve been here ages.”","“Any idea how long this is going to take?”"],
+["Are you waiting for the same thing?","Checking whether someone is queuing for the same service.","“Are you waiting for the guided tour as well?”","“You here for the 2 o’clock too?”"],
+["Tell me about it!","Agreeing when someone complains.","“So slow today.” “Tell me about it!”","“Right?”"],
+["I’ve got a bit of time to kill, so…","Explaining why you don’t mind waiting.","“I’m not in a rush, I’ve got time to kill.”","“No rush, honestly.”"]]},
+{t:"Pharmacy",r:"In the US it’s “drugstore” or “pharmacy”. In the UK it’s “chemist”. Pharmacists can often advise without a prescription.",x:[
+["I’ve been feeling a bit off lately.","Describing vague discomfort.","“I’ve been feeling a bit off since yesterday.”","“I’m not feeling great.”"],
+["Do you have anything for a sore throat?","Asking for an over-the-counter remedy.","“Do you have anything for a sore throat that isn’t too strong?”","“What do you recommend for…?”"],
+["I’ve already tried…, but it didn’t help.","Saying what you’ve done so far.","“I’ve already tried paracetamol, but it didn’t do much.”","“That didn’t really do the trick.”"],
+["Is there anything else I could take instead?","Asking for alternatives.","“Is there anything else I could take instead? That one makes me drowsy.”","“Any other options?”"],
+["Are there any side effects I should watch out for?","Checking safety.","“Any side effects I should watch out for? I’ll be flying tomorrow.”","“Will it knock me out?”"]]},
+{t:"Supermarket",r:"“Grocery store” in the US, “supermarket” or “shop” in the UK. In the UK you’ll hear “Are you alright?” as a greeting.",x:[
+["Sorry, could you point me to the…?","Asking where a product is.","“Sorry, could you point me to the gluten-free section?”","“Where would I find…?”"],
+["Do you happen to have any…in stock?","Checking availability politely.","“Do you happen to have any oat milk in stock?”","“Have you got any…?”"],
+["What’s this like? I’ve never tried it.","Asking about an unfamiliar product.","“What’s this like? I’ve never tried it.”","“Is this any good?”"],
+["Is this the best one, or is there a better brand?","Asking staff for a recommendation.","“Is this the best one, or is there a better brand?”","“Which one do you go for?”"],
+["Do I need to weigh these myself?","Handling a small self-service doubt.","“Do I need to weigh these myself?”","“Do I weigh these here?”"]]},
+{t:"Restaurant / café",r:"In the US, tipping is expected (about 18–20%). In much of Europe it’s optional. “To go” is US, “takeaway” is UK.",x:[
+["What would you recommend?","Asking for suggestions.","“I’m torn between two. What would you recommend?”","“What’s good here?”"],
+["I’m allergic to…, can that be left out?","Dietary needs, politely.","“Could I get that without the onions? I’m allergic.”","“Can you hold the onions?”"],
+["Could I swap the fries for a salad?","Customizing an order.","“Could I swap the fries for a salad, if that’s okay?”","“Is it okay to switch the…?”"],
+["What’s in the sauce, exactly?","Clarifying a dish.","“What’s in the sauce exactly? Is it spicy?”","“Is it spicy?”"],
+["I think there’s been a small mix-up.","Handling a mistake tactfully.","“I think there’s been a small mix-up. I ordered the veggie one.”","“Sorry, this isn’t quite what I ordered.”"],
+["I’m still deciding, actually.","When asked if you’re ready.","“Could we have a couple more minutes? I’m still deciding.”","“Give me a sec!”"]]},
+{t:"Directions / transport",r:"Locals often give landmarks, not street names: “past the pub, then left at the church”.",x:[
+["Excuse me, do you know how to get to…?","Opening a request politely.","“Excuse me, do you know how to get to the station from here?”","“Hey, sorry, is the station near here?”"],
+["So I go straight and take the second left?","Confirming instructions.","“So I just go straight and take the second left, right?”","“Second left, got it.”"],
+["Is it within walking distance?","Deciding between walking and transport.","“Is it within walking distance, or should I take the bus?”","“Can I walk it?”"],
+["Which line do I need to take?","Public transport.","“Which line do I need to take to get to the airport?”","“What’s the best way to get to…?”"],
+["Do I need to tap in and out?","Payment on transit.","“Do I need to tap in and out, or is it one flat fare?”","“How do I pay for this?”"]]},
+{t:"Hotel",r:"“Reception” is “front desk” in the US. Tone is relaxed: be polite, not stiff.",x:[
+["I’ve got a reservation under…","Checking in.","“Hi, I’ve got a reservation under Silva.”","“Hi, I’m checked in under…”"],
+["Is breakfast included, and what time does it finish?","Clarifying services.","“Is breakfast included? And what time does it finish?”","“Does the rate include breakfast?”"],
+["I’m afraid there’s a problem with the room.","Reporting something broken.","“I’m afraid the air conditioning isn’t working. Could someone take a look?”","“The AC’s not working, can you sort that?”"],
+["Would it be possible to switch to a quieter room?","Asking for a change.","“Would it be possible to switch to a quieter room?”","“Any chance of a quieter room?”"],
+["Is there anywhere nearby you’d recommend for dinner?","Asking for local tips.","“Is there anywhere nearby you’d recommend for dinner? Somewhere not too touristy.”","“Where do you go to eat?”"]]}
+];
+var ti=0;
+function renderTab(){var s=S[ti];el("tb").innerHTML=s.x.map(function(r){return "<tr><td>“"+r[0]+"”</td><td>"+r[1]+"</td><td>"+r[2]+"<br><span class='alt'>Casual: "+r[3]+"</span></td></tr>"}).join("");
+el("regnote").textContent="Register & region: "+s.r;
+[].forEach.call(el("tabs").children,function(b,i){b.setAttribute("aria-selected",i===ti)})}
+S.forEach(function(s,i){var b=document.createElement("button");b.setAttribute("role","tab");b.textContent=s.t;b.onclick=function(){ti=i;renderTab()};el("tabs").appendChild(b)});
+renderTab();
+
+function renderScenes(){var d=cur;var sc=[
+{h:"Scene 1: A local tip",g:"Ask someone for a recommendation and keep them talking.",o:"“Oh, you’re visiting? You’ve got to see "+d.s+"!”",f:"“How did you find out about it?” · “Is it far from here?” · “Are you from around here?”",tn:"Play a chatty local. Share a personal story to give her something to react to. If she only asks one question, ask her one back."},
+{h:"Scene 2: In line for something",g:"Make small talk with the person beside you, then order "+d.f+" and ask about it.",o:"“It’s always like this. Is it your first time trying "+d.f+"?”",f:"“What’s it like?” · “Does it come with anything?” · “Do you eat this often?”",tn:"Switch roles: first the stranger, then the server. Let her ask the questions."},
+{h:"Scene 3: Something goes wrong",g:"Solve a problem with your hotel booking.",o:"“Hi, welcome. Sorry, can you say your name again? I can’t find a reservation under that.”",f:"Don’t reveal everything at once. Only after her first reply: “Actually, we’re fully booked tonight, so I can offer you a room at another hotel, or tomorrow night here.”",tn:"Reveal complications gradually. She should negotiate, clarify and ask for alternatives (“Is there anything else you could do?”). Stay friendly, not hostile.",tw:1},
+{h:"Scene 4: A spontaneous plan",g:"Say yes to something you didn’t plan, or politely say no, and explain why.",o:"“By the way, tonight there’s "+d.ev+". A few of us are going. You should come!”",f:"“What time does it start?” · “What should I wear?” · “Who else is going?”",tn:"Watch for natural phrases like “That sounds great!” or “I’d love to, but…”. Keep the exit open so she chooses."}];
+el("scenes").innerHTML=sc.map(function(s){return "<div class='scene"+(s.tw?" twist":"")+"'><h3>"+s.h+"</h3><p class='goal'>"+s.g+"</p><p class='say'>Teacher opens: "+s.o+"</p><p class='fu'><em>Follow-ups:</em> "+s.f+"</p><div class='teacher'><b>Teacher:</b> "+s.tn+"</div></div>"}).join("")}
+renderScenes();
+</script>
+</body>
+</html>
